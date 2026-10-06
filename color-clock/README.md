@@ -1,16 +1,98 @@
-# React + Vite
+# Color Clock
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that displays the current date and time using the `date-fns` package.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Displays the current date and time
+- Uses React and JSX
+- Uses `date-fns` to format the date and time
+- Includes simple color styling
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- npm
+- date-fns
 
-## Expanding the ESLint configuration
+## How to Run the Project Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository.
+
+2. Navigate into the project folder:
+
+```bash
+cd color-clock
+```
+
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+4. Install the `date-fns` dependency if needed:
+
+```bash
+npm install date-fns@2.30.0
+```
+
+5. Start the development server:
+
+```bash
+npm run dev
+```
+
+6. Open the localhost URL provided by Vite in your browser.
+
+Example:
+
+```text
+http://localhost:5173/
+```
+
+## Project Structure
+
+```text
+color-clock/
+├── index.html
+├── package.json
+├── README.md
+└── src/
+    ├── App.jsx
+    └── main.jsx
+```
+
+## How the Application Works
+
+The `index.html` file contains the root element where the React application is displayed.
+
+The `main.jsx` file connects React to the root element and renders the `App` component.
+
+The `App.jsx` file contains the main clock component. It uses JavaScript's `new Date()` to get the current date and time and the `format()` function from `date-fns` to display it in a readable format.
+
+Example:
+
+```jsx
+format(new Date(), 'MMMM d, yyyy h:mm:ss a')
+```
+
+The application also includes simple inline styling to add color and improve the appearance of the clock.
+
+## Dependency
+
+This project uses `date-fns` for date and time formatting.
+
+```bash
+npm install date-fns@2.30.0
+```
+
+## Screenshot
+
+![Color Clock Screenshot](./clock-screenshot.png).
+
+## Author
+
+Perpetua Ayogu
